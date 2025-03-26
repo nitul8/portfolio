@@ -212,7 +212,9 @@ const Home = () => {
             {/* Contact Section */}
             <div className="w-full flex flex-col items-center pt-10 pl-4 pb-20">
                 <div className="max-w-screen-md w-full flex flex-col justify-center items-center">
-                    <p className="text-3xl font-extrabold">Let's Connect</p>
+                    <p className="text-3xl font-extrabold">
+                        Let&apos;s Connect
+                    </p>
                     <div className="mt-2 text-center w-3/4 text-xl">
                         Want to connect? Feel free to drop me a DM on{" "}
                         <Link
