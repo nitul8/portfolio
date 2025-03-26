@@ -1,0 +1,32 @@
+export const experiences = [
+    {
+        id: 1,
+        company: "Astitva Foundation",
+        logo: "/astitva.png",
+        link: "https://astitvafoundation.vercel.app/",
+        role: "Co-Founder & Lead",
+        duration: "January 2025 - Present",
+        location: "Jorhat, Assam",
+        skills: ["React", "Tailwind CSS", "Node.js", "Mogodb", "Express.js"],
+    },
+    {
+        id: 2,
+        company: "IIT Guwahati",
+        logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/1200px-IIT_Guwahati_Logo.svg.png",
+        link: "",
+        role: "Research Intern",
+        duration: "June 2024 - July 2024",
+        location: "Guwahati, India",
+        skills: ["Python", "Tensorflow", "NLP", "Deep Learning"],
+    },
+    {
+        id: 3,
+        company: "Ideal Abhijan",
+        logo: "https://static.wixstatic.com/media/82f8d2_d4bc235a351a4855b595decec86531a0~mv2.jpg/v1/fit/w_2500,h_1330,al_c/82f8d2_d4bc235a351a4855b595decec86531a0~mv2.jpg",
+        link: "",
+        role: "Social Intern",
+        duration: "June 2023 - July 2023",
+        location: "Jorhat, India",
+        skills: ["Public Speaking", "Audience Analysis", "Team Management"],
+    },
+];
