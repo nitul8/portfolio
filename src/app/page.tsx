@@ -232,7 +232,7 @@ const Home = () => {
                         >
                             LinkedIn
                         </Link>
-                        , and I'll get back to you when I can.
+                        , and I&apos;ll get back to you when I can.
                     </div>
                 </div>
             </div>
