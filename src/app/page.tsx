@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {FiGithub, FiChevronRight} from "react-icons/fi";
 import {TbBrandLeetcode} from "react-icons/tb";
 import {CiLinkedin} from "react-icons/ci";
@@ -13,11 +14,12 @@ const Home = () => {
             <div className="w-full min-h-screen flex flex-col justify-center items-center px-4">
                 <div className="max-w-screen-md w-full flex flex-col items-center md:items-start">
                     <div className="flex items-center justify-start w-full">
-                        <div className="w-20 h-20 mb-0 mr-2">
-                            <img
+                        <div className="w-20 h-20 mb-0 mr-2 relative">
+                            <Image
                                 src="/nitul.jpeg"
                                 alt="Profile"
-                                className="rounded-full object-cover w-full h-full"
+                                fill
+                                className="rounded-full object-cover"
                             />
                         </div>
                         <div className="text-left flex flex-col justify-center items-start">
@@ -110,11 +112,14 @@ const Home = () => {
                         Education
                     </p>
                     <div className="flex items-center gap-2 mt-4">
-                        <img
-                            src="/jec_logo.jpg"
-                            alt="JEC Logo"
-                            className="h-10 w-10 md:h-16 md:w-16 rounded-full"
-                        />
+                        <div className="relative h-10 w-10 md:h-16 md:w-16">
+                            <Image
+                                src="/jec_logo.jpg"
+                                alt="JEC Logo"
+                                fill
+                                className="rounded-full object-cover"
+                            />
+                        </div>
                         <div className="w-full mr-1 md:mr-0">
                             <div className="flex justify-between items-center">
                                 <Link
@@ -158,11 +163,14 @@ const Home = () => {
                                     key={id}
                                     className="flex items-center gap-2"
                                 >
-                                    <img
-                                        src={logo}
-                                        alt={company}
-                                        className="h-12 md:h-16 w-12 md:w-16 rounded-full"
-                                    />
+                                    <div className="relative h-12 w-12 md:h-16 md:w-16">
+                                        <Image
+                                            src={logo}
+                                            alt={company}
+                                            fill
+                                            className="rounded-full object-cover"
+                                        />
+                                    </div>
                                     <div className="flex flex-col w-full">
                                         <div className="flex justify-between items-center">
                                             <Link

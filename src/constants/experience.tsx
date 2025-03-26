@@ -12,8 +12,8 @@ export const experiences = [
     {
         id: 2,
         company: "IIT Guwahati",
-        logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/1200px-IIT_Guwahati_Logo.svg.png",
-        link: "",
+        logo: "/IITG_logo.png",
+        link: "https://iitg.ac.in/",
         role: "Research Intern",
         duration: "June 2024 - July 2024",
         location: "Guwahati, India",
@@ -22,8 +22,8 @@ export const experiences = [
     {
         id: 3,
         company: "Ideal Abhijan",
-        logo: "https://static.wixstatic.com/media/82f8d2_d4bc235a351a4855b595decec86531a0~mv2.jpg/v1/fit/w_2500,h_1330,al_c/82f8d2_d4bc235a351a4855b595decec86531a0~mv2.jpg",
-        link: "",
+        logo: "/ideal_abhijan.jpg",
+        link: "https://www.idealabhijan.co.in/",
         role: "Social Intern",
         duration: "June 2023 - July 2023",
         location: "Jorhat, India",
