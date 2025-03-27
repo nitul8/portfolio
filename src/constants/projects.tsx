@@ -134,12 +134,19 @@ export const projects: ProjectProps[] = [
         description:
             "Displays real-time weather data for various cities using weather API.",
         technologies: [
-            {icon: FaHtml5, color: "text-red-400", name: "HTML5"},
-            {icon: FaCss3Alt, color: "text-blue-600", name: "CSS3"},
+            {icon: RiNextjsFill, color: "text-black", name: "Next.js"},
+            {icon: FaReact, color: "text-blue-400", name: "React.js"},
+            {icon: SiTypescript, color: "text-blue-500", name: "TypeScript"},
+            {
+                icon: RiTailwindCssFill,
+                color: "inline mr-1 text-teal-400",
+                name: "Tailwind CSS",
+            },
             {icon: FaJs, color: "text-yellow-400", name: "JavaScript"},
         ],
         image: "/projects/weatherapp.png",
-        demoLink: "#",
+        demoLink:
+            "https://redesigned-lamp-vxxqwrxrqrv2q94-3000.app.github.dev/weatherapp",
         codeLink:
             "https://github.com/nitul8/Projectfolio/tree/main/app/weatherapp",
     },
@@ -156,5 +163,25 @@ export const projects: ProjectProps[] = [
         image: "/projects/facebook.png",
         demoLink: "#",
         codeLink: "https://github.com/nitul8/FaceBook_Clone",
+    },
+    {
+        id: 8,
+        title: "ProjectFolio",
+        description: "A pleace to find all my mini projects.",
+        technologies: [
+            {icon: RiNextjsFill, color: "text-black", name: "Next.js"},
+            {icon: FaReact, color: "text-blue-400", name: "React.js"},
+            {icon: SiTypescript, color: "text-blue-500", name: "TypeScript"},
+            {
+                icon: RiTailwindCssFill,
+                color: "inline mr-1 text-teal-400",
+                name: "Tailwind CSS",
+            },
+            {icon: FaJs, color: "text-yellow-400", name: "JavaScript"},
+        ],
+        image: "/projects/projectfolio.png",
+        demoLink:
+            "https://redesigned-lamp-vxxqwrxrqrv2q94-3000.app.github.dev/",
+        codeLink: "https://github.com/nitul8/Projectfolio/",
     },
 ];
