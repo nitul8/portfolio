@@ -1,64 +1,33 @@
-"use client";
-import {useState} from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
 import Link from "next/link";
-import Image from "next/image";
+import {TiHomeOutline} from "react-icons/ti";
+import {TbTools, TbMedal} from "react-icons/tb";
 
 const NavBar = () => {
-    const [nav, setNav] = useState(false);
-
     const links = [
-        {id: "1", link: "/", name: "Home"},
-        {id: "2", link: "/projects", name: "Projects"},
-        {id: "3", link: "/achievements", name: "Achievements"},
+        {id: 1, link: "/", icon: <TiHomeOutline />, name: "Home"},
+        {id: 2, link: "/projects", icon: <TbTools />, name: "Projects"},
+        {id: 3, link: "/achievements", icon: <TbMedal />, name: "Achievements"},
     ];
 
     return (
-        <div className="z-50 flex justify-between items-center w-full h-12 md:h-20 fixed bg-white dark:bg-black text-black dark:text-white px-4 md:px-8">
-            {/* Logo */}
-            <Link href="/" className="font-logo">
-                <Image
-                    src="/nitul.png"
-                    alt="LOGO"
-                    width={96}
-                    height={40}
-                    className="w-18 h-8 md:w-24 md:h-10"
-                    priority={true}
-                />
-            </Link>
-
-            {/* Desktop Navbar */}
-            <ul className="hidden md:flex items-center space-x-10">
-                {links.map(({id, link, name}) => (
-                    <li
-                        key={id}
-                        className="text-gray-500 hover:scale-110 hover:underline duration-300"
-                    >
-                        <Link href={link}>{name}</Link>
-                    </li>
-                ))}
-            </ul>
-
-            {/* Mobile Menu Button */}
-            <div
-                onClick={() => setNav(!nav)}
-                className="cursor-pointer z-50 text-gray-500 md:hidden"
-            >
-                {nav ? <FaTimes size={24} /> : <FaBars size={24} />}
-            </div>
-
-            {/* Mobile Menu */}
-            {nav && (
-                <ul className="fixed top-0 left-0 w-full h-screen bg-white dark:bg-black flex flex-col justify-center items-center z-50 mobile-menu">
-                    {links.map(({id, link, name}) => (
-                        <li key={id} className="text-xl my-6">
-                            <Link href={link} onClick={() => setNav(false)}>
-                                {name}
+        <div className="fixed inset-0 flex items-end justify-center z-50 w-full">
+            <div className="flex bg-gray-200 dark:bg-gray-600 text-black dark:text-white justify-center px-4 py-2 mb-8 rounded-full border border-gray-600">
+                <ul className="flex items-center justify-between space-x-6 hover:space-x-8 px-2 py-1">
+                    {links.map(({id, link, icon, name}) => (
+                        <li
+                            key={id}
+                            className="hover:scale-125 duration-300 group"
+                        >
+                            <Link href={link} className="text-2xl">
+                                {icon}
                             </Link>
+                            <div className="absolute bottom-10 left-1/2 w-auto min-w-max transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white text-sm p-1 rounded-md whitespace-nowrap text-center">
+                                {name}
+                            </div>
                         </li>
                     ))}
                 </ul>
-            )}
+            </div>
         </div>
     );
 };
