@@ -106,7 +106,7 @@ const Home = () => {
             </div>
 
             {/* Education Section */}
-            <div className="w-full flex flex-col items-center py-10 pl-4">
+            <div className="w-full flex flex-col items-center pt-10 pl-4">
                 <div className="max-w-screen-md w-full">
                     <p className="text-2xl font-bold pb-2 underline underline-offset-4">
                         Education
