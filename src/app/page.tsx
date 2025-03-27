@@ -6,6 +6,41 @@ import {CiLinkedin} from "react-icons/ci";
 import {MdOutlineContactPage} from "react-icons/md";
 import {technologies} from "../constants/technology";
 import {experiences} from "../constants/experience";
+import {JSX} from "react";
+
+interface SocialLink {
+    id: number;
+    link: string;
+    icon: JSX.Element;
+    name: string;
+}
+
+const SocialLinks: SocialLink[] = [
+    {
+        id: 1,
+        link: "https://github.com/nitul8",
+        icon: <FiGithub className="text-xl" />,
+        name: "GitHub",
+    },
+    {
+        id: 2,
+        link: "https://leetcode.com/u/ndas6732/",
+        icon: <TbBrandLeetcode className="text-xl" />,
+        name: "Leetcode",
+    },
+    {
+        id: 3,
+        link: "https://www.linkedin.com/in/nituldas/",
+        icon: <CiLinkedin className="text-xl" />,
+        name: "LinkedIn",
+    },
+    {
+        id: 4,
+        link: "/resume.pdf",
+        icon: <MdOutlineContactPage className="text-xl" />,
+        name: "Resume",
+    },
+];
 
 const Home = () => {
     return (
@@ -42,35 +77,17 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap justify-start gap-4 mt-6">
-                        <a
-                            href="https://github.com/nitul8"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 hover:text-black"
-                        >
-                            <FiGithub className="text-xl" /> GitHub
-                        </a>
-                        <a
-                            href="https://leetcode.com/u/ndas6732/"
-                            target="_blank"
-                            className="flex items-center gap-2 hover:text-black"
-                        >
-                            <TbBrandLeetcode className="text-xl" /> Leetcode
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/nituldas/"
-                            target="_blank"
-                            className="flex items-center gap-2 hover:text-black"
-                        >
-                            <CiLinkedin className="text-xl" /> LinkedIn
-                        </a>
-                        <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            className="flex items-center gap-2 hover:text-black"
-                        >
-                            <MdOutlineContactPage className="text-xl" /> Resume
-                        </a>
+                        {SocialLinks.map(({id, link, icon, name}) => (
+                            <Link
+                                key={id}
+                                href={link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 hover:text-black"
+                            >
+                                {icon} {name}
+                            </Link>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -88,14 +105,14 @@ const Home = () => {
                         {technologies.map(
                             ({id, icon, nam, exp, style, url}) => (
                                 <div key={id} className="relative group">
-                                    <a
+                                    <Link
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={`flex items-center justify-center text-3xl h-10 md:h-16 w-10 md:w-16 rounded-full ${style} transition-transform duration-300 hover:scale-110`}
                                     >
                                         {icon}
-                                    </a>
+                                    </Link>
                                     <div className="absolute bottom-14 left-1/2 w-auto min-w-max transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white text-sm p-1 rounded-md whitespace-nowrap text-center">
                                         {nam} - {exp}+ years
                                     </div>
@@ -123,13 +140,13 @@ const Home = () => {
                         </div>
                         <div className="w-full mr-1 md:mr-0">
                             <div className="flex justify-between items-center">
-                                <a
+                                <Link
                                     href="https://jecassam.ac.in/"
                                     className="text-md md:text-lg font-bold flex items-center group"
                                 >
                                     Jorhat Engineering College
                                     <FiChevronRight className="ml-1 opacity-0 group-hover:opacity-100" />
-                                </a>
+                                </Link>
                                 <p className="text-xs md:text-sm text-gray-500">
                                     2022 - 2026
                                 </p>
@@ -174,14 +191,14 @@ const Home = () => {
                                     </div>
                                     <div className="flex flex-col w-full">
                                         <div className="flex justify-between items-center">
-                                            <a
+                                            <Link
                                                 href={link}
                                                 target="_blank"
                                                 className="text-md md:text-lg font-semibold flex items-center group"
                                             >
                                                 {company}
                                                 <FiChevronRight className="ml-1 opacity-0 group-hover:opacity-100" />
-                                            </a>
+                                            </Link>
                                             <p className="text-xs md:text-sm text-gray-500">
                                                 {duration}
                                             </p>
@@ -227,13 +244,13 @@ const Home = () => {
                             X
                         </Link>{" "}
                         or{" "}
-                        <a
+                        <Link
                             href="https://www.linkedin.com/in/nituldas/"
                             target="_blank"
                             className="font-bold text-blue-600 cursor-pointer"
                         >
                             LinkedIn
-                        </a>
+                        </Link>
                         , and I&apos;ll get back to you when I can.
                     </div>
                 </div>

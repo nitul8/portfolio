@@ -1,7 +1,32 @@
-import {FaReact, FaJs, FaCss3Alt, FaHtml5, FaNodeJs} from "react-icons/fa";
-import {SiVite, SiExpress, SiMongodb} from "react-icons/si";
-import {RiTailwindCssFill} from "react-icons/ri";
-export const projects = [
+import {FaHtml5, FaCss3Alt, FaJs, FaReact} from "react-icons/fa";
+import {FaNodeJs} from "react-icons/fa";
+import {RiTailwindCssFill, RiNextjsFill} from "react-icons/ri";
+import {
+    SiTypescript,
+    SiExpress,
+    SiMongodb,
+    SiCplusplus,
+    SiVite,
+} from "react-icons/si";
+import {IconType} from "react-icons";
+
+interface Technology {
+    icon: IconType;
+    color: string;
+    name: string;
+}
+
+interface ProjectProps {
+    id: number;
+    title: string;
+    description: string;
+    technologies: Technology[];
+    image: string;
+    demoLink: string;
+    codeLink: string;
+}
+
+export const projects: ProjectProps[] = [
     {
         id: 1,
         title: "Astitva Foundation Website",
@@ -55,19 +80,19 @@ export const projects = [
         description:
             "Personal portfolio showcasing skills, projects, and experience.",
         technologies: [
-            {icon: FaReact, color: "text-blue-400", name: "React"},
+            {icon: RiNextjsFill, color: "text-black", name: "Next.js"},
+            {icon: FaReact, color: "text-blue-400", name: "React.js"},
+            {icon: SiTypescript, color: "text-blue-500", name: "TypeScript"},
             {
                 icon: RiTailwindCssFill,
                 color: "inline mr-1 text-teal-400",
                 name: "Tailwind CSS",
             },
             {icon: FaJs, color: "text-yellow-400", name: "JavaScript"},
-            {icon: FaHtml5, color: "text-red-400", name: "HTML5"},
-            {icon: FaCss3Alt, color: "text-blue-600", name: "CSS3"},
         ],
         image: "/projects/portfolio.png",
         demoLink: "https://nituldas.vercel.app/",
-        codeLink: "https://github.com/nitul8/Portfolio",
+        codeLink: "https://github.com/nitul8/portfolio",
     },
     {
         id: 4,
@@ -115,7 +140,8 @@ export const projects = [
         ],
         image: "/projects/weatherapp.png",
         demoLink: "#",
-        codeLink: "https://github.com/nitul8/PRODIGY_WD_05",
+        codeLink:
+            "https://github.com/nitul8/Projectfolio/tree/main/app/weatherapp",
     },
     {
         id: 7,

@@ -80,6 +80,8 @@ const Achievements = () => {
                                 <Image
                                     src={src}
                                     alt={`Achievement ${id}`}
+                                    width={300}
+                                    height={100}
                                     className="w-full sm:w-3/4 lg:w-2/3 object-cover duration-200 hover:scale-105 rounded-lg"
                                 />
                             </div>
