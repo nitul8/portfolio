@@ -51,21 +51,19 @@ const Projects = () => {
                                     })}
                                 </div>
                                 <div className="flex gap-8 justify-center bottom-0">
-                                    {demoLink && (
-                                        <a
-                                            href={demoLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-gray-500 hover:text-red-400 text-lg"
-                                        >
-                                            <FaPlay />
-                                        </a>
-                                    )}
+                                    <a
+                                        href={demoLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-gray-500 hover:text-red-400 text-lg cursor-pointer"
+                                    >
+                                        <FaPlay />
+                                    </a>
                                     <a
                                         href={codeLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-gray-500 hover:text-gray-400 text-lg"
+                                        className="text-gray-500 hover:text-gray-400 text-lg cursor-pointer"
                                     >
                                         <FaCode />
                                     </a>

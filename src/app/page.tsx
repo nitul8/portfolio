@@ -42,34 +42,35 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap justify-start gap-4 mt-6">
-                        <Link
+                        <a
                             href="https://github.com/nitul8"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="flex items-center gap-2 hover:text-black"
                         >
                             <FiGithub className="text-xl" /> GitHub
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href="https://leetcode.com/u/ndas6732/"
                             target="_blank"
                             className="flex items-center gap-2 hover:text-black"
                         >
                             <TbBrandLeetcode className="text-xl" /> Leetcode
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href="https://www.linkedin.com/in/nituldas/"
                             target="_blank"
                             className="flex items-center gap-2 hover:text-black"
                         >
                             <CiLinkedin className="text-xl" /> LinkedIn
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href="/resume.pdf"
                             target="_blank"
                             className="flex items-center gap-2 hover:text-black"
                         >
                             <MdOutlineContactPage className="text-xl" /> Resume
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -87,14 +88,14 @@ const Home = () => {
                         {technologies.map(
                             ({id, icon, nam, exp, style, url}) => (
                                 <div key={id} className="relative group">
-                                    <Link
+                                    <a
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className={`flex items-center justify-center text-3xl h-10 md:h-16 w-10 md:w-16 rounded-full ${style} transition-transform duration-300 hover:scale-110`}
                                     >
                                         {icon}
-                                    </Link>
+                                    </a>
                                     <div className="absolute bottom-14 left-1/2 w-auto min-w-max transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black text-white text-sm p-1 rounded-md whitespace-nowrap text-center">
                                         {nam} - {exp}+ years
                                     </div>
@@ -122,13 +123,13 @@ const Home = () => {
                         </div>
                         <div className="w-full mr-1 md:mr-0">
                             <div className="flex justify-between items-center">
-                                <Link
+                                <a
                                     href="https://jecassam.ac.in/"
                                     className="text-md md:text-lg font-bold flex items-center group"
                                 >
                                     Jorhat Engineering College
                                     <FiChevronRight className="ml-1 opacity-0 group-hover:opacity-100" />
-                                </Link>
+                                </a>
                                 <p className="text-xs md:text-sm text-gray-500">
                                     2022 - 2026
                                 </p>
@@ -173,14 +174,14 @@ const Home = () => {
                                     </div>
                                     <div className="flex flex-col w-full">
                                         <div className="flex justify-between items-center">
-                                            <Link
+                                            <a
                                                 href={link}
                                                 target="_blank"
                                                 className="text-md md:text-lg font-semibold flex items-center group"
                                             >
                                                 {company}
                                                 <FiChevronRight className="ml-1 opacity-0 group-hover:opacity-100" />
-                                            </Link>
+                                            </a>
                                             <p className="text-xs md:text-sm text-gray-500">
                                                 {duration}
                                             </p>
@@ -221,17 +222,18 @@ const Home = () => {
                             href="https://x.com/ni_t_ul8"
                             target="_blank"
                             className="font-bold text-blue-600"
+                            passHref={true}
                         >
                             X
                         </Link>{" "}
                         or{" "}
-                        <Link
+                        <a
                             href="https://www.linkedin.com/in/nituldas/"
                             target="_blank"
-                            className="font-bold text-blue-600"
+                            className="font-bold text-blue-600 cursor-pointer"
                         >
                             LinkedIn
-                        </Link>
+                        </a>
                         , and I&apos;ll get back to you when I can.
                     </div>
                 </div>

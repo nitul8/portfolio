@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Achievements = () => {
@@ -76,9 +77,9 @@ const Achievements = () => {
                                 </div>
                             </div>
                             <div className="flex justify-center sm:justify-end">
-                                <img
+                                <Image
                                     src={src}
-                                    alt={`Portfolio ${id}`}
+                                    alt={`Achievement ${id}`}
                                     className="w-full sm:w-3/4 lg:w-2/3 object-cover duration-200 hover:scale-105 rounded-lg"
                                 />
                             </div>
