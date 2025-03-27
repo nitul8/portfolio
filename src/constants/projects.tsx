@@ -1,13 +1,7 @@
 import {FaHtml5, FaCss3Alt, FaJs, FaReact} from "react-icons/fa";
 import {FaNodeJs} from "react-icons/fa";
 import {RiTailwindCssFill, RiNextjsFill} from "react-icons/ri";
-import {
-    SiTypescript,
-    SiExpress,
-    SiMongodb,
-    SiCplusplus,
-    SiVite,
-} from "react-icons/si";
+import {SiTypescript, SiExpress, SiMongodb, SiVite} from "react-icons/si";
 import {IconType} from "react-icons";
 
 interface Technology {
