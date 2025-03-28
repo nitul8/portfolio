@@ -139,8 +139,7 @@ export const projects: ProjectProps[] = [
             {icon: FaJs, color: "text-yellow-400", name: "JavaScript"},
         ],
         image: "/projects/weatherapp.png",
-        demoLink:
-            "https://redesigned-lamp-vxxqwrxrqrv2q94-3000.app.github.dev/weatherapp",
+        demoLink: "https://projectfolio.onrender.com/weatherapp",
         codeLink:
             "https://github.com/nitul8/Projectfolio/tree/main/app/weatherapp",
     },
@@ -174,8 +173,7 @@ export const projects: ProjectProps[] = [
             {icon: FaJs, color: "text-yellow-400", name: "JavaScript"},
         ],
         image: "/projects/projectfolio.png",
-        demoLink:
-            "https://redesigned-lamp-vxxqwrxrqrv2q94-3000.app.github.dev/",
+        demoLink: "https://projectfolio.onrender.com/",
         codeLink: "https://github.com/nitul8/Projectfolio/",
     },
 ];
